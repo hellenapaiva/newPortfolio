@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import { NavLink } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 import LogoComponent from '../subComponents/LogoComponent'
@@ -146,30 +147,45 @@ const Main = () => {
                 </Center>
 
                 <Contact target="_blank" to={{ pathname: "mailto:hellenapaiva@msn.com" }}>
-                    <h2>
+                    <motion.h2
+                        whileHover={{scale: 1.1}}
+                        whileTap={{scale: 0.9}}
+                    >
                         Talk to me
-                    </h2>
+                    </motion.h2>
                 </Contact>
                 <BLOG to="/blog">
-                    <h2>
+                    <motion.h2
+                        whileHover={{scale: 1.1}}
+                        whileTap={{scale: 0.9}}
+                    >
                         Blog
-                    </h2>
+                    </motion.h2>
                 </BLOG>
                 <WORK to="/work" click={clickHere} >
-                    <h2>
+                    <motion.h2
+                        whileHover={{scale: 1.1}}
+                        whileTap={{scale: 0.9}}
+                    >
                         Work
-                    </h2>
+                    </motion.h2>
                 </WORK>
                 <BottomBar>
                     <ABOUT to="/about" click={clickHere} >
-                        <h2>
+                        <motion.h2
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                        >
                             About me.
-                        </h2>
+                        </motion.h2>
                     </ABOUT>
                     <SKILLS to="/skills">
-                        <h2>
+                        <motion.h2
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                        >
                             My Skills.
-                        </h2>
+                        </motion.h2>
                     </SKILLS>
                 </BottomBar>
 
